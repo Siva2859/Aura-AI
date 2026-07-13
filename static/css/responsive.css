@@ -1,0 +1,547 @@
+/* ==========================================================
+   RESPONSIVE DESIGN
+   Aura AI Chatbot
+========================================================== */
+
+/* ==========================================================
+   LARGE LAPTOPS
+========================================================== */
+
+@media (max-width: 1400px){
+
+    .app{
+
+        grid-template-columns:
+            260px
+            1fr
+            290px;
+
+    }
+
+}
+
+/* ==========================================================
+   LAPTOPS
+========================================================== */
+
+@media (max-width:1200px){
+
+    .app{
+
+        grid-template-columns:
+
+            240px
+
+            1fr
+
+            280px;
+
+    }
+
+    .message-content{
+
+        max-width:85%;
+
+    }
+
+}
+
+/* ==========================================================
+   TABLETS
+========================================================== */
+
+@media (max-width:992px){
+
+    .app{
+
+        grid-template-columns:
+
+            80px
+
+            1fr;
+
+    }
+
+    .right-panel{
+
+        position:fixed;
+
+        right:-340px;
+
+        top:0;
+
+        width:320px;
+
+        height:100vh;
+
+        z-index:1000;
+
+        transition:.35s;
+
+    }
+
+    .right-panel.active{
+
+        right:0;
+
+    }
+
+    .sidebar{
+
+        width:80px;
+
+    }
+
+    .sidebar .logo span,
+
+    .sidebar .history-title,
+
+    .sidebar .history-item span,
+
+    .sidebar .search-box,
+
+    .sidebar .user-profile div,
+
+    .sidebar .menu-item span{
+
+        display:none;
+
+    }
+
+    .sidebar .logo{
+
+        justify-content:center;
+
+    }
+
+    .sidebar .menu-item{
+
+        justify-content:center;
+
+    }
+
+    .sidebar .history-item{
+
+        justify-content:center;
+
+    }
+
+    .sidebar .new-chat-btn{
+
+        width:50px;
+
+        margin:20px auto;
+
+        padding:0;
+
+    }
+
+    .sidebar .new-chat-btn span{
+
+        display:none;
+
+    }
+
+}
+
+/* ==========================================================
+   SMALL TABLETS
+========================================================== */
+
+@media (max-width:768px){
+
+    .app{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .sidebar{
+
+        position:fixed;
+
+        left:-300px;
+
+        top:0;
+
+        width:min(280px,85vw);
+
+        height:100vh;
+
+        z-index:1200;
+
+        transition:.35s;
+
+    }
+
+    .sidebar-overlay{
+
+        position:fixed;
+
+        inset:0;
+
+        background:rgba(0,0,0,.45);
+
+        backdrop-filter:blur(4px);
+
+        opacity:0;
+
+        visibility:hidden;
+
+        transition:.3s;
+
+        z-index:1199;
+
+    }
+
+    .sidebar-overlay.active{
+
+        opacity:1;
+
+        visibility:visible;
+
+    }
+
+    .right-panel{
+
+        width:280px;
+
+    }
+
+    .right-panel{
+
+        transform:translateX(100%);
+
+        right:0;
+
+    }
+
+    .right-panel.active{
+
+        transform:translateX(0);
+
+    }
+
+    .chat-header{
+
+        padding:15px;
+
+    }
+
+    .chat-title h2{
+
+        font-size:18px;
+
+    }
+
+    .chat-title span{
+
+        display:none;
+
+    }
+
+    .chat-actions{
+
+        gap:8px;
+
+    }
+
+    .chat-messages{
+
+        padding:16px 20px;
+
+    }
+
+    .message-content{
+
+        max-width:92%;
+
+    }
+
+    .chat-input-container{
+
+        padding:15px;
+
+    }
+
+    .chat-input{
+
+        gap:8px;
+
+    }
+
+    .chat-input{
+
+        align-items:flex-end;
+
+    }
+
+    .tool-btn{
+
+        width:40px;
+
+        height:40px;
+
+    }
+
+    .send-btn{
+
+        width:44px;
+
+        height:44px;
+
+    }
+
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width:576px){
+
+    .chat-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:12px;
+
+    }
+
+    .chat-actions{
+
+        width:100%;
+
+        justify-content:flex-end;
+
+    }
+
+    .message{
+
+        gap:10px;
+
+    }
+
+    .avatar{
+
+        width:34px;
+
+        height:34px;
+
+    }
+
+    .message-content{
+
+        max-width:100%;
+
+        padding:14px;
+
+    }
+
+    .message-text{
+
+        font-size:14px;
+
+    }
+
+    .welcome-icon{
+
+        width:80px;
+
+        height:80px;
+
+    }
+
+    .welcome-icon i{
+
+        font-size:38px;
+
+    }
+
+    .welcome-screen p{
+
+        font-size:15px;
+
+        line-height:1.6;
+
+    }
+
+    .chat-input{
+
+        padding:8px;
+
+    }
+
+    .chat-input textarea{
+
+        font-size:14px;
+
+    }
+
+    .send-btn{
+
+        width:42px;
+
+        height:42px;
+
+    }
+
+    .prompt-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/* ==========================================================
+   VERY SMALL DEVICES
+========================================================== */
+
+@media (max-width:400px){
+
+    .chat-header{
+
+        padding:12px;
+
+    }
+
+    .chat-messages{
+
+        padding:14px;
+
+    }
+
+    .message-content{
+
+        padding:12px;
+
+    }
+
+    .tool-btn{
+
+        width:36px;
+
+        height:36px;
+
+    }
+
+    .send-btn{
+
+        width:38px;
+
+        height:38px;
+
+    }
+
+}
+
+/* ==========================================================
+   LANDSCAPE PHONES
+========================================================== */
+
+@media (max-height:600px){
+
+    .welcome-screen{
+
+        margin-top:20px;
+
+        margin-bottom:20px;
+
+    }
+
+    .sidebar{
+
+        overflow-y:auto;
+
+    }
+
+    .right-panel{
+
+        overflow-y:auto;
+
+    }
+
+    .chat-input-container{
+
+        position:sticky;
+
+        bottom:0;
+
+    }
+}
+
+/* ==========================================================
+   TOUCH DEVICES
+========================================================== */
+
+@media (hover:none){
+
+    .menu-item:hover,
+
+    .history-item:hover,
+
+    .action-btn:hover,
+
+    .msg-btn:hover,
+
+    .tool-btn:hover,
+
+    .icon-btn:hover{
+
+        transform:none;
+
+    }
+
+}
+
+/* ==========================================================
+   PRINT
+========================================================== */
+
+@media print{
+
+    .sidebar,
+
+    .right-panel,
+
+    .chat-input-container,
+
+    .chat-actions,
+
+    .message-actions{
+
+        display:none !important;
+
+    }
+
+    .chat-container{
+
+        width:100%;
+
+    }
+
+    .message-content{
+
+        box-shadow:none;
+
+        border:1px solid #ccc;
+
+    }
+
+}
+
+.message-actions{
+
+    flex-wrap:wrap;
+
+}
+
+html,
+body{
+
+    overflow-x:hidden;
+
+}

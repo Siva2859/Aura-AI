@@ -1,0 +1,664 @@
+/* ==========================================================
+   SIDEBAR
+========================================================== */
+
+.sidebar{
+
+    width:260px;
+
+    transition:width .3s ease,
+               transform .3s ease,
+               background .3s ease;
+
+    height:100vh;
+
+    background:var(--sidebar);
+
+    border-right:1px solid var(--border);
+
+    display:flex;
+
+    flex-direction:column;
+
+    overflow:hidden;
+
+}
+
+/* ==========================================================
+   LOGO
+========================================================== */
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:20px;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+.logo img{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:12px;
+
+    object-fit:cover;
+
+    transition:.3s;
+
+}
+
+.logo img:hover{
+
+    transform:rotate(10deg) scale(1.05);
+
+}
+
+.logo span{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:var(--text);
+
+}
+
+/* ==========================================================
+   NEW CHAT BUTTON
+========================================================== */
+
+.new-chat-btn{
+
+    margin:20px;
+
+    height:50px;
+
+    border-radius:14px;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    transition:var(--transition);
+
+}
+
+.new-chat-btn:hover{
+
+    background:var(--primary-hover);
+
+    transform:translateY(-2px);
+
+}
+
+.new-chat-btn i{
+
+    font-size:20px;
+
+}
+
+/* ==========================================================
+   SEARCH BOX
+========================================================== */
+
+.search-box{
+
+    margin:0 20px 20px;
+
+    position:relative;
+
+}
+
+.search-box i{
+
+    position:absolute;
+
+    left:15px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:var(--text-muted);
+
+    font-size:18px;
+
+}
+
+.search-box i{
+
+    pointer-events:none;
+
+}
+
+.search-box input{
+
+    width:100%;
+
+    padding:12px 16px 12px 44px;
+
+    border-radius:12px;
+
+    background:var(--bg-card);
+
+    border:1px solid var(--border);
+
+    color:var(--text);
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 3px rgba(124,92,255,.20);    
+
+}
+
+.search-box input::placeholder{
+
+    color:var(--text-muted);
+
+}
+
+/* ==========================================================
+   MENU
+========================================================== */
+
+.sidebar-menu{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:6px;
+
+    padding:0 15px;
+
+}
+
+.menu-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:14px 16px;
+
+    border-radius:12px;
+
+    color:var(--text-light);
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+}
+
+.menu-item:hover{
+
+    background:rgba(124,92,255,.12);
+
+    color:var(--primary);
+
+    transform:translateX(4px);
+
+}
+
+.menu-item.active{
+
+    background:rgba(124,92,255,.18);
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    border-left:4px solid var(--primary);
+
+}
+
+.menu-item i{
+
+    font-size:20px;
+
+}
+
+/* ==========================================================
+   CHAT HISTORY
+========================================================== */
+
+.history{
+
+    flex:1;
+
+    overflow-y:auto;
+
+    margin-top:20px;
+
+    padding:0 15px 20px;
+
+}
+
+.history-title{
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:var(--text-muted);
+
+    margin-bottom:12px;
+
+    padding:0 10px;
+
+    text-transform:uppercase;
+
+    letter-spacing:5px;
+
+}
+
+.history-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.history-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    width:100%;
+
+    padding:10px 12px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+    color:var(--text-light);
+
+    overflow:hidden;
+
+    transition:
+        background .25s,
+        color .25s,
+        transform .25s;    
+
+}
+
+.history-item:hover{
+
+    background:var(--bg-card);
+
+    color:var(--text);
+
+    transform:translateX(3px);
+
+}
+
+.history-item.active{
+
+    background:rgba(124,92,255,.18);
+
+    color:var(--primary);
+
+}
+
+.history-item i{
+
+    font-size:18px;
+
+}
+
+.history-item span{
+
+    flex:1;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    white-space:nowrap;
+
+    min-width:0;
+
+}
+
+.history-name{
+
+    flex:1;
+
+    min-width:0;
+
+    overflow:hidden;
+
+    white-space:nowrap;
+
+    text-overflow:ellipsis;
+
+    font-size:14px;
+
+    font-weight:500;
+
+    color:var(--text);
+
+}
+
+.empty-history i{
+
+    font-size:48px;
+
+    display:block;
+
+    margin-bottom:12px;
+
+    color:var(--text-muted);
+
+}
+
+/* ==========================================================
+   USER PROFILE
+========================================================== */
+
+.user-profile{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:18px;
+
+    border-top:1px solid var(--border);
+
+    background:var(--bg-secondary);
+
+}
+
+.user-profile img{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+}
+
+.user-profile h4{
+
+    font-size:16px;
+
+    margin-bottom:4px;
+
+}
+
+.user-profile p{
+
+    font-size:13px;
+
+    color:var(--success);
+
+}
+
+.user-profile{
+
+    transition:var(--transition);
+
+}
+
+.user-profile:hover{
+
+    background:var(--bg-card);
+
+}
+
+/* ==========================================================
+   COLLAPSED SIDEBAR (Future Support)
+========================================================== */
+
+.sidebar.collapsed{
+
+    width:80px;
+
+}
+
+.sidebar.collapsed .logo span,
+.sidebar.collapsed .menu-item span,
+.sidebar.collapsed .history-title,
+.sidebar.collapsed .history-item span,
+.sidebar.collapsed .search-box,
+.sidebar.collapsed .user-profile div{
+
+    display:none;
+
+}
+
+.sidebar.collapsed .new-chat-btn{
+
+    margin:20px auto;
+
+    width:50px;
+
+    padding:0;
+
+}
+
+.sidebar.collapsed .new-chat-btn i{
+
+    margin:0;
+
+}
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+.history::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+.history::-webkit-scrollbar-thumb{
+
+    background:var(--border);
+
+    border-radius:20px;
+
+}
+
+.history::-webkit-scrollbar-thumb:hover{
+
+    background:var(--primary);
+
+}
+
+.history-item{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:10px;
+
+}
+
+.history-actions{
+
+    display:flex;
+
+    gap:8px;
+
+    flex-shrink:0;
+
+}
+
+.history-action-btn{
+
+    background:transparent;
+
+    border:none;
+
+    color:var(--text-muted);
+
+    cursor:pointer;
+
+    padding:4px;
+
+    border-radius:6px;
+
+    transition:0.2s;
+
+}
+
+.history-action-btn:hover{
+
+    background:rgba(124,92,255,.12);
+
+    color:var(--primary);
+
+}
+
+.history-item.active{
+
+    box-shadow:
+        inset 0 0 0 1px rgba(124,92,255,.25);
+
+}
+
+.document-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px;
+
+    margin:8px 0;
+
+    border:1px solid #2d2d2d;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.document-item:hover{
+
+    background:#2c2c2c;
+
+}
+
+.document-item i{
+
+    font-size:20px;
+
+    color:#4CAF50;
+
+}
+
+.document-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px;
+
+    margin:12px 0;
+
+    border-radius:12px;
+
+    background:#202225;
+
+}
+
+.document-info{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.document-info i{
+
+    font-size:26px;
+
+    color:#ff5252;
+
+}
+
+.document-actions{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.document-actions button{
+
+    padding:8px 14px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    background:#6C63FF;
+
+    color:white;
+
+}
+
+.document-actions button:hover{
+
+    opacity:.85;
+
+}

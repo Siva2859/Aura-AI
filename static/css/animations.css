@@ -1,0 +1,658 @@
+/* ==========================================================
+   AURA AI
+   ANIMATIONS
+========================================================== */
+
+/* ===========================
+   FADE IN
+=========================== */
+
+.fade-in{
+
+    animation:fadeIn .35s ease forwards;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+/* ===========================
+   FADE UP
+=========================== */
+
+.fade-up{
+
+    animation:fadeUp .35s ease forwards;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   SLIDE LEFT
+=========================== */
+
+.slide-left{
+
+    animation:slideLeft .35s ease forwards;
+
+}
+
+@keyframes slideLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+/* ===========================
+   SLIDE RIGHT
+=========================== */
+
+.slide-right{
+
+    animation:slideRight .35s ease forwards;
+
+}
+
+@keyframes slideRight{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+/* ===========================
+   SCALE IN
+=========================== */
+
+.scale-in{
+
+    animation:scaleIn .25s ease forwards;
+
+}
+
+@keyframes scaleIn{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.85);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* ===========================
+   POP
+=========================== */
+
+.pop{
+
+    animation:pop .25s ease;
+
+}
+
+@keyframes pop{
+
+    0%{
+
+        transform:scale(.9);
+
+    }
+
+    60%{
+
+        transform:scale(1.03);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* ===========================
+   BUTTON RIPPLE
+=========================== */
+
+.ripple{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.ripple::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.35);
+
+    transform:scale(0);
+
+    opacity:0;
+
+    pointer-events:none;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%) scale(0);
+
+
+}
+
+.ripple:active::after{
+
+    animation:ripple .45s ease;
+
+}
+
+@keyframes ripple{
+
+    from{
+
+        transform:scale(0);
+
+        opacity:.7;
+
+    }
+
+    to{
+
+        transform:scale(18);
+
+        opacity:0;
+
+    }
+
+}
+
+/* ===========================
+   FLOAT
+=========================== */
+
+.float{
+
+    animation:float 4s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-6px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   GLOW
+=========================== */
+
+.glow{
+
+    animation:glow 2s infinite alternate;
+
+}
+
+@keyframes glow{
+
+    from{
+
+        box-shadow:0 0 10px rgba(124,92,255,.25);
+
+    }
+
+    to{
+
+        box-shadow:
+
+            0 0 25px rgba(124,92,255,.35),
+
+            0 0 45px rgba(124,92,255,.12);
+
+    }
+
+}
+
+/* ===========================
+   SPINNER
+=========================== */
+
+.spin{
+
+    animation:spin .8s linear infinite;
+
+}
+
+@keyframes spin{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* ===========================
+   BOUNCE
+=========================== */
+
+.bounce{
+
+    animation:bounce 1.4s infinite;
+
+}
+
+@keyframes bounce{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+}
+
+/* ===========================
+   SHAKE
+=========================== */
+
+.shake{
+
+    animation:shake .45s;
+
+}
+
+@keyframes shake{
+
+    0%{transform:translateX(0);}
+    20%{transform:translateX(-6px);}
+    40%{transform:translateX(6px);}
+    60%{transform:translateX(-4px);}
+    80%{transform:translateX(4px);}
+    100%{transform:translateX(0);}
+
+}
+
+/* ===========================
+   TYPING CURSOR
+=========================== */
+
+.typing-cursor{
+
+    border-right:2px solid var(--primary);
+
+    animation:cursorBlink .8s infinite;
+
+}
+
+@keyframes cursorBlink{
+
+    50%{
+
+        border-color:transparent;
+
+    }
+
+}
+
+/* ===========================
+   MESSAGE APPEAR
+=========================== */
+
+.message{
+
+    animation:messageAppear .3s cubic-bezier(.2,.8,.2,1);
+
+}
+
+@keyframes messageAppear{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   TOAST
+=========================== */
+
+.toast-show{
+
+    animation:toastShow .3s ease forwards;
+
+}
+
+.toast-hide{
+
+    animation:toastHide .3s ease forwards;
+
+}
+
+@keyframes toastShow{
+
+    from{
+
+        transform:translateX(100%);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:translateX(0);
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes toastHide{
+
+    from{
+
+        transform:translateX(0);
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:translateX(100%);
+
+        opacity:0;
+
+    }
+
+}
+
+/* ===========================
+   SIDEBAR
+=========================== */
+
+.sidebar{
+
+    transition:width .3s ease,left .3s ease;
+
+}
+
+.history-item{
+
+    transition:.25s;
+
+}
+
+.menu-item{
+
+    transition:.25s;
+
+}
+
+/* ===========================
+   CHAT
+=========================== */
+
+.message-content{
+
+    transition:.25s;
+
+}
+
+.msg-btn{
+
+    transition:.25s;
+
+}
+
+.tool-btn{
+
+    transition:.25s;
+
+}
+
+.send-btn{
+
+    transition:.25s;
+
+}
+
+.icon-btn{
+
+    transition:.25s;
+
+}
+
+/* ===========================
+   HOVER
+=========================== */
+
+.hover-grow:hover{
+
+    transform:scale(1.04);
+
+}
+
+.hover-lift:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.hover-rotate:hover{
+
+    transform:rotate(10deg);
+
+}
+
+/* ===========================
+   LOADER DOTS
+=========================== */
+
+.loader-dots{
+
+    display:flex;
+
+    gap:6px;
+
+}
+
+.loader-dots span{
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    animation:dots 1.3s infinite;
+
+}
+
+.loader-dots span:nth-child(2){
+
+    animation-delay:.2s;
+
+}
+
+.loader-dots span:nth-child(3){
+
+    animation-delay:.4s;
+
+}
+
+@keyframes dots{
+
+    0%,100%{
+
+        opacity:.3;
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:translateY(-8px);
+
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+        scroll-behavior:auto !important;
+
+    }
+
+}
+
+.fade-out{
+
+    animation:fadeOut .25s ease forwards;
+
+}
+
+@keyframes fadeOut{
+
+    from{
+
+        opacity:1;
+
+    }
+
+    to{
+
+        opacity:0;
+
+    }
+
+}

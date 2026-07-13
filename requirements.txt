@@ -1,0 +1,8 @@
+Flask==3.1.2
+groq
+PyPDF2
+python-docx
+pandas
+Werkzeug
+python-dotenv
+google-generativeai
