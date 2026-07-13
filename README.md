@@ -168,7 +168,7 @@ GitHub:
 https://github.com/Siva2859
 
 LinkedIn:
-https://linkedin.com/in/achanta-siva-rama-krishna-8b8346335
+https://www.linkedin.com/in/sivaramakrishnaachanta/
 
 ---
 
